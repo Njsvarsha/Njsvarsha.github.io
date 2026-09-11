@@ -6,7 +6,7 @@
   <title>Nethala Joyous Sona Varsha | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -16,13 +16,15 @@
       --inner-card-bg: rgba(15, 22, 36, 0.8);
       --text-main: #f3f4f6;
       --text-sub: #9ca3af;
-      --accent-blue: #3b82f6;
-      --accent-glow: #60a5fa;
+      --accent-blue: #00d2ff;
+      --accent-glow: #3a7bd5;
       --badge-bg: rgba(59, 130, 246, 0.15);
       --badge-text: #93c5fd;
       --icon-bg: #1e293b;
       --input-bg: rgba(15, 23, 42, 0.6);
       --fab-bg: #6366f1;
+      --chip-bg: rgba(255, 255, 255, 0.05);
+      --chip-border: rgba(255, 255, 255, 0.1);
     }
 
     [data-theme="light"] {
@@ -32,13 +34,15 @@
       --inner-card-bg: rgba(248, 250, 252, 0.9);
       --text-main: #0f172a;
       --text-sub: #64748b;
-      --accent-blue: #2563eb;
-      --accent-glow: #3b82f6;
+      --accent-blue: #0284c7;
+      --accent-glow: #2563eb;
       --badge-bg: rgba(37, 99, 235, 0.1);
       --badge-text: #1d4ed8;
       --icon-bg: #e2e8f0;
       --input-bg: #ffffff;
       --fab-bg: #4f46e5;
+      --chip-bg: rgba(0, 0, 0, 0.03);
+      --chip-border: rgba(0, 0, 0, 0.08);
     }
 
     * {
@@ -80,14 +84,14 @@
       width: 42px;
       height: 42px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      background: linear-gradient(135deg, #00d2ff, #3a7bd5);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
       color: #fff;
       font-size: 16px;
-      box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
     }
 
     .brand-name {
@@ -121,6 +125,103 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    /* Hero Section (Matching Image Design) */
+    .hero-section {
+      text-align: center;
+      padding: 20px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      color: #10b981;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .hero-title {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .highlight {
+      background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 18px;
+    }
+
+    .hero-subtitle .role-highlight {
+      color: #00d2ff;
+      border-right: 2px solid #00d2ff;
+      padding-right: 4px;
+    }
+
+    .hero-description {
+      font-size: 15px;
+      color: var(--text-sub);
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0 auto 28px;
+    }
+
+    .quick-chips {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 380px;
+      align-items: center;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      width: 100%;
+      backdrop-filter: blur(5px);
+    }
+
+    .chip-icon {
+      font-size: 14px;
+      color: var(--accent-blue);
     }
 
     /* Cards Layout */
@@ -293,7 +394,7 @@
       width: 100%;
       padding: 14px;
       border-radius: 30px;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      background: linear-gradient(135deg, #00d2ff, #3a7bd5);
       color: white;
       font-weight: 700;
       border: none;
@@ -303,7 +404,7 @@
       justify-content: center;
       gap: 8px;
       font-size: 15px;
-      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
     }
 
     /* Floating Action Button */
@@ -369,6 +470,39 @@
   </header>
 
   <div class="container">
+
+    <!-- HERO SECTION (MATCHING REFERENCE IMAGE) -->
+    <div class="hero-section">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        Opportunities
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm
+        <span class="highlight">Nethala Joyous Sona Varsha</span>
+      </h1>
+
+      <div class="hero-subtitle">
+        I'm an <span class="role-highlight">Computer Science Undergrad</span>
+      </div>
+
+      <p class="hero-description">
+        Motivated and enthusiastic Computer Science Engineering student with a strong interest in Data Analytics. Eager to learn and contribute through an internship while developing technical and analytical skills.
+      </p>
+
+      <div class="quick-chips">
+        <div class="chip">
+          <span class="chip-icon">🎓</span> B.Tech CSE (Expected 2028)
+        </div>
+        <div class="chip">
+          <span class="chip-icon">🎯</span> CGPA: 8.7
+        </div>
+        <div class="chip">
+          <span class="chip-icon">📍</span> Vijayawada, Andhra Pradesh
+        </div>
+      </div>
+    </div>
 
     <!-- About Cards -->
     <div class="card">
