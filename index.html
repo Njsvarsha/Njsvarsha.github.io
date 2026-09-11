@@ -1,0 +1,349 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Varsha | Portfolio</title>  
+
+<style>  
+    * {  
+        margin: 0;  
+        padding: 0;  
+        box-sizing: border-box;  
+        scroll-behavior: smooth;  
+    }  
+
+    body {  
+        font-family: Arial, sans-serif;  
+        background: #f7f8fc;  
+        color: #222;  
+        line-height: 1.6;  
+    }  
+
+    header {  
+        background: #111827;  
+        color: white;  
+        padding: 20px 8%;  
+        position: sticky;  
+        top: 0;  
+        z-index: 100;  
+    }  
+
+    nav {  
+        display: flex;  
+        justify-content: space-between;  
+        align-items: center;  
+    }  
+
+    nav h2 {  
+        font-size: 24px;  
+    }  
+
+    nav a {  
+        color: white;  
+        text-decoration: none;  
+        margin-left: 20px;  
+        font-size: 15px;  
+    }  
+
+    nav a:hover {  
+        color: #60a5fa;  
+    }  
+
+    .hero {  
+        min-height: 90vh;  
+        display: flex;  
+        align-items: center;  
+        justify-content: center;  
+        text-align: center;  
+        padding: 40px 20px;  
+        background: linear-gradient(135deg, #eef2ff, #ffffff);  
+    }  
+
+    .hero h1 {  
+        font-size: 48px;  
+        color: #111827;  
+        margin-bottom: 10px;  
+    }  
+
+    .hero h1 span {  
+        color: #2563eb;  
+    }  
+
+    .hero p {  
+        font-size: 20px;  
+        color: #555;  
+        margin-bottom: 25px;  
+    }  
+
+    .btn {  
+        display: inline-block;  
+        background: #2563eb;  
+        color: white;  
+        padding: 12px 25px;  
+        border-radius: 25px;  
+        text-decoration: none;  
+        margin: 5px;  
+    }  
+
+    .btn:hover {  
+        background: #1d4ed8;  
+    }  
+
+    section {  
+        padding: 70px 8%;  
+    }  
+
+    section h2 {  
+        text-align: center;  
+        font-size: 32px;  
+        margin-bottom: 35px;  
+        color: #111827;  
+    }  
+
+    .about {  
+        max-width: 800px;  
+        margin: auto;  
+        text-align: center;  
+        font-size: 18px;  
+        color: #555;  
+    }  
+
+    .education-card,  
+    .project-card {  
+        max-width: 800px;  
+        margin: 20px auto;  
+        padding: 25px;  
+        background: white;  
+        border-radius: 15px;  
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);  
+    }  
+
+    .education-card h3,  
+    .project-card h3 {  
+        color: #2563eb;  
+        margin-bottom: 8px;  
+    }  
+
+    .skills {  
+        display: flex;  
+        flex-wrap: wrap;  
+        justify-content: center;  
+        gap: 15px;  
+    }  
+
+    .skill {  
+        background: white;  
+        padding: 12px 20px;  
+        border-radius: 25px;  
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);  
+        font-weight: bold;  
+    }  
+
+    .project-card ul {  
+        margin-left: 20px;  
+        margin-top: 10px;  
+    }  
+
+    .contact {  
+        text-align: center;  
+        background: #111827;  
+        color: white;  
+    }  
+
+    .contact h2 {  
+        color: white;  
+    }  
+
+    .contact a {  
+        color: #60a5fa;  
+        text-decoration: none;  
+    }  
+
+    footer {  
+        background: #0b1120;  
+        color: white;  
+        text-align: center;  
+        padding: 20px;  
+    }  
+
+    @media (max-width: 700px) {  
+        nav {  
+            flex-direction: column;  
+            gap: 12px;  
+        }  
+
+        nav a {  
+            margin: 5px;  
+        }  
+
+        .hero h1 {  
+            font-size: 36px;  
+        }  
+
+        .hero p {  
+            font-size: 17px;  
+        }  
+    }  
+</style>
+
+</head>  <body>  <!-- Navigation -->  
+<header>  
+    <nav>  
+        <h2>Varsha</h2>  
+
+        <div>  
+            <a href="#about">About</a>  
+            <a href="#education">Education</a>  
+            <a href="#skills">Skills</a>  
+            <a href="#projects">Projects</a>  
+            <a href="#contact">Contact</a>  
+        </div>  
+    </nav>  
+</header>  
+
+
+<!-- Home -->  
+<section class="hero">  
+    <div>  
+        <h1>Hi, I'm <span>Varsha</span> 👋</h1>  
+
+        <p>  
+            B.Tech Computer Science & Engineering Student  
+        </p>  
+
+        <p>  
+            Interested in Data Analytics & Technology  
+        </p>  
+
+        <a href="#about" class="btn">Explore My Portfolio</a>  
+        <a href="#contact" class="btn">Contact Me</a>  
+    </div>  
+</section>  
+
+
+<!-- About -->  
+<section id="about">  
+    <h2>About Me</h2>  
+
+    <div class="about">  
+        <p>  
+            I am Nethala Joyous Sona Varsha, a Computer Science  
+            and Engineering student at Dhanekula Institute of  
+            Engineering and Technology.  
+        </p>  
+
+        <br>  
+
+        <p>  
+            I am interested in Data Analytics and continuously  
+            developing my technical and analytical skills.  
+            I am looking for opportunities to gain internship  
+            experience and apply my knowledge to real-world  
+            projects.  
+        </p>  
+    </div>  
+</section>  
+
+
+<!-- Education -->  
+<section id="education">  
+    <h2>Education</h2>  
+
+    <div class="education-card">  
+        <h3>B.Tech - Computer Science and Engineering</h3>  
+
+        <p>  
+            <strong>Dhanekula Institute of Engineering and Technology</strong>  
+        </p>  
+
+        <p>Expected Graduation: 2028</p>  
+
+        <p>CGPA: 7.17</p>  
+    </div>  
+</section>  
+
+
+<!-- Skills -->  
+<section id="skills">  
+    <h2>My Skills</h2>  
+
+    <div class="skills">  
+        <div class="skill">C - Basic</div>  
+        <div class="skill">Java - Basic</div>  
+        <div class="skill">Microsoft Excel</div>  
+        <div class="skill">Pivot Tables</div>  
+        <div class="skill">Pivot Charts</div>  
+        <div class="skill">Data Analysis</div>  
+    </div>  
+</section>  
+
+
+<!-- Projects -->  
+<section id="projects">  
+    <h2>My Project</h2>  
+
+    <div class="project-card">  
+        <h3>Sales Data Analysis using Microsoft Excel</h3>  
+
+        <p>  
+            A data analysis project created using Microsoft Excel  
+            to understand sales performance and identify useful  
+            business insights.  
+        </p>  
+
+        <ul>  
+            <li>Used SUM and AVERAGE formulas</li>  
+            <li>Used MAX and MIN functions</li>  
+            <li>Created Pivot Tables</li>  
+            <li>Created Pivot Charts</li>  
+            <li>Analyzed product sales</li>  
+            <li>Electronics was identified as the highest-selling category</li>  
+        </ul>  
+    </div>  
+</section>  
+
+
+<!-- Career Objective -->  
+<section>  
+    <h2>Career Objective</h2>  
+
+    <div class="about">  
+        <p>  
+            To gain practical internship experience in Data Analytics,  
+            improve my technical and analytical abilities, and  
+            contribute to real-world projects while continuously  
+            learning new technologies.  
+        </p>  
+    </div>  
+</section>  
+
+
+<!-- Contact -->  
+<section id="contact" class="contact">  
+    <h2>Contact Me</h2>  
+
+    <p>  
+        📧 Email:  
+        <a href="mailto:njsvarsha29@gmail.com">  
+            njsvarsha29@gmail.com  
+        </a>  
+    </p>  
+
+    <p>  
+        📱 Phone: +91 7673913116  
+    </p>  
+
+    <br>  
+
+    <a href="mailto:njsvarsha29@gmail.com" class="btn">  
+        Send Me an Email  
+    </a>  
+</section>  
+
+
+<!-- Footer -->  
+<footer>  
+    <p>© 2026 Nethala Joyous Sona Varsha | Portfolio</p>  
+</footer>
+
+</body>  
+          </html>
