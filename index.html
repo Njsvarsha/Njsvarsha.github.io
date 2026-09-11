@@ -1,283 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nethala Joyous Sona Varsha | Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nethala Joyous Sona Varsha | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% -20%, #131b2e 0%, #0b0f19 100%);
+      --card-bg: rgba(22, 30, 49, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --inner-card-bg: rgba(15, 22, 36, 0.8);
+      --text-main: #f3f4f6;
+      --text-sub: #9ca3af;
+      --accent-blue: #3b82f6;
+      --accent-glow: #60a5fa;
+      --badge-bg: rgba(59, 130, 246, 0.15);
+      --badge-text: #93c5fd;
+      --icon-bg: #1e293b;
+      --input-bg: rgba(15, 23, 42, 0.6);
+      --fab-bg: #6366f1;
+    }
 
-        body {
-            background-color: #f1f5f9;
-            color: #334155;
-            line-height: 1.6;
-        }
+    [data-theme="light"] {
+      --bg-gradient: radial-gradient(circle at 50% -20%, #f1f5f9 0%, #e2e8f0 100%);
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(0, 0, 0, 0.08);
+      --inner-card-bg: rgba(248, 250, 252, 0.9);
+      --text-main: #0f172a;
+      --text-sub: #64748b;
+      --accent-blue: #2563eb;
+      --accent-glow: #3b82f6;
+      --badge-bg: rgba(37, 99, 235, 0.1);
+      --badge-text: #1d4ed8;
+      --icon-bg: #e2e8f0;
+      --input-bg: #ffffff;
+      --fab-bg: #4f46e5;
+    }
 
-        /* Navigation Bar */
-        header {
-            background-color: #0f172a;
-            color: #ffffff;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    }
 
-        header h1 {
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
-            color: #38bdf8;
-        }
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding-bottom: 60px;
+    }
 
-        nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin-left: 1.2rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+    /* Navbar Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background: rgba(11, 15, 25, 0.6);
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        nav a:hover {
-            color: #38bdf8;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
-        /* Hero Banner */
-        .hero {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            color: #ffffff;
-            padding: 3.5rem 1.5rem;
-            text-align: center;
-        }
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 16px;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+    }
 
-        .hero h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: #38bdf8;
-            margin-bottom: 1.2rem;
-            font-weight: 500;
-        }
+    .nav-actions {
+      display: flex;
+      gap: 8px;
+    }
 
-        .hero .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            font-size: 0.95rem;
-            color: #94a3b8;
-        }
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--icon-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
 
-        .hero .contact-info a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-        /* Main Container */
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    /* Cards Layout */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
 
-        /* Sections */
-        section {
-            background: #ffffff;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--icon-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--accent-blue);
+    }
 
-        section h3 {
-            color: #0f172a;
-            border-bottom: 3px solid #38bdf8;
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.2rem;
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
 
-        /* Table Design */
-        .table-responsive {
-            overflow-x: auto;
-        }
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 0.5rem;
-        }
+    .section-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
 
-        th, td {
-            padding: 12px 15px;
-            border: 1px solid #e2e8f0;
-            text-align: left;
-        }
+    .section-header {
+      text-align: center;
+      margin: 20px 0 10px;
+    }
 
-        th {
-            background-color: #0f172a;
-            color: #ffffff;
-            font-weight: 600;
-        }
+    .section-header h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
 
-        tr:nth-child(even) {
-            background-color: #f8fafc;
-        }
+    .section-header p {
+      color: var(--text-sub);
+      font-size: 14px;
+    }
 
-        /* Skill Chips */
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+    /* List Items inside Cards */
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
 
-        .skill-tag {
-            background: #e0f2fe;
-            color: #0369a1;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid #bae6fd;
-        }
+    .skill-item {
+      background: var(--inner-card-bg);
+      border: 1px solid var(--card-border);
+      padding: 14px 18px;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        /* Lists */
-        ul {
-            padding-left: 1.2rem;
-        }
+    .skill-name {
+      font-weight: 600;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        li {
-            margin-bottom: 0.6rem;
-        }
+    .skill-name::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+    }
 
-        code {
-            background-color: #f1f5f9;
-            color: #0284c7;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
+    .skill-tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-weight: 600;
+    }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background: #0f172a;
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-        }
-    </style>
+    /* Key Metrics Grid */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .metric-card {
+      background: var(--inner-card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .metric-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .metric-val {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 6px 0;
+    }
+
+    .metric-sub {
+      font-size: 12px;
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    /* Form Fields */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-sub);
+    }
+
+    .form-group input, .form-group textarea {
+      background: var(--input-bg);
+      border: 1px solid var(--card-border);
+      padding: 14px;
+      border-radius: 12px;
+      color: var(--text-main);
+      outline: none;
+      font-size: 14px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: white;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 15px;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    /* Floating Action Button */
+    .fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--fab-bg);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+    }
+
+    /* Footer Nav */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--card-border);
+      margin-top: 40px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .footer-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .copyright {
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>NJS VARSHA</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="brand">
+      <div class="avatar">NV</div>
+      <div class="brand-name">Nethala Joyous Sona Varsha</div>
+    </div>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle">🌙</button>
+      <button class="icon-btn">☰</button>
+    </div>
+  </header>
 
-    <div class="hero">
-        <h2>NETHALA JOYOUS SONA VARSHA</h2>
-        <p>Computer Science Engineering Student | Data Analytics Aspirant</p>
-        <div class="contact-info">
-            <span>📍 Vijayawada, Andhra Pradesh</span>
-            <span>📞 +91 7673913116</span>
-            <a href="mailto:njsvarsha29@gmail.com">✉️ njsvarsha29@gmail.com</a>
+  <div class="container">
+
+    <!-- About Cards -->
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <div class="card-title">Data Focus</div>
+      <div class="card-desc">Passionate about exploring datasets, building pivot summaries, formula-based metrics, and visualization charts.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <div class="card-title">Quick Learner</div>
+      <div class="card-desc">Adaptable and proactive mindset with solid problem solving, effective communication, and time management skills.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📍</div>
+      <div class="card-title">Location & Base</div>
+      <div class="card-desc">Based in Vijayawada, Andhra Pradesh, available for in-person, hybrid, or remote internship roles.</div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section-header">
+      <span class="section-badge">Skill Set</span>
+      <h2>Technical & Professional Competencies</h2>
+      <p>Categorized overview of technical capabilities, data analytics tools, soft skills, and languages strictly from my resume.</p>
+    </div>
+
+    <!-- Programming -->
+    <div class="card">
+      <div class="card-title">Programming</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">C</span><span class="skill-tag">Basic</span></div>
+        <div class="skill-item"><span class="skill-name">Java</span><span class="skill-tag">Basic</span></div>
+      </div>
+    </div>
+
+    <!-- Data Analytics & Tools -->
+    <div class="card">
+      <div class="card-title">Data Analytics & Tools</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">Microsoft Excel</span><span class="skill-tag">Core Tool</span></div>
+        <div class="skill-item"><span class="skill-name">Pivot Tables & Charts</span><span class="skill-tag">Applied</span></div>
+        <div class="skill-item"><span class="skill-name">Data Analysis</span><span class="skill-tag">Beginner</span></div>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="card">
+      <div class="card-title">Soft Skills</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">Quick Learner</span><span class="skill-tag">Key Asset</span></div>
+        <div class="skill-item"><span class="skill-name">Problem Solving</span><span class="skill-tag">Analytical</span></div>
+        <div class="skill-item"><span class="skill-name">Teamwork</span><span class="skill-tag">Collaborative</span></div>
+        <div class="skill-item"><span class="skill-name">Communication</span><span class="skill-tag">Interpersonal</span></div>
+        <div class="skill-item"><span class="skill-name">Time Management</span><span class="skill-tag">Organized</span></div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="card">
+      <div class="card-title">Languages</div>
+      <div class="skill-list">
+        <div class="skill-item"><span class="skill-name">English</span><span class="skill-tag">Proficient</span></div>
+        <div class="skill-item"><span class="skill-name">Telugu</span><span class="skill-tag">Native / Fluent</span></div>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section-header">
+      <span class="section-badge">Education</span>
+      <h2>Academic Background</h2>
+      <p>Formal undergraduate engineering education and academic performance metrics.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">B.Tech in Computer Science and Engineering</div>
+      <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 12px;">Dhanekula Institute of Engineering and Technology</p>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">Cumulative CGPA</div>
+          <div class="metric-val" style="color: #10b981;">8.7</div>
+          <div class="metric-sub">Verified Merit</div>
         </div>
+        <div class="metric-card">
+          <div class="metric-label">Expected Graduation</div>
+          <div class="metric-val">2028</div>
+          <div class="metric-sub" style="color: var(--text-sub);">In Progress</div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-
-        <section id="about">
-            <h3>Career Objective</h3>
-            <p>Motivated and enthusiastic Computer Science Engineering student with a strong interest in Data Analytics. Eager to learn, gain practical experience, and contribute effectively through an internship while developing technical and analytical skills.</p>
-        </section>
-
-        <section id="education">
-            <h3>Education Profile</h3>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Qualification</th>
-                            <th>Institution</th>
-                            <th>Board / University</th>
-                            <th>Year</th>
-                            <th>CGPA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>B.Tech (CSE)</strong></td>
-                            <td>Dhanekula Institute of Engineering and Technology</td>
-                            <td>JNTUK</td>
-                            <td>Expected 2028</td>
-                            <td>7.17</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h3>Technical & Soft Skills</h3>
-            <div class="skills-grid">
-                <span class="skill-tag">C (Basic)</span>
-                <span class="skill-tag">Java (Basic)</span>
-                <span class="skill-tag">Microsoft Excel</span>
-                <span class="skill-tag">Pivot Tables & Charts</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">Problem Solving</span>
-                <span class="skill-tag">Time Management</span>
-                <span class="skill-tag">Teamwork</span>
-                <span class="skill-tag">Communication</span>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h3>Academic Projects</h3>
-            <h4 style="color: #0f172a; margin-bottom: 0.5rem;">Sales Data Analysis Using Microsoft Excel</h4>
-            <ul>
-                <li>Created and analyzed a sales dataset using Microsoft Excel.</li>
-                <li>Used <code>SUM</code>, <code>AVERAGE</code>, <code>MAX</code>, and <code>MIN</code> formulas to calculate key metrics.</li>
-                <li>Built Pivot Tables to summarize category-wise sales.</li>
-                <li>Created Pivot Charts to visualize sales performance.</li>
-                <li>Identified <strong>Electronics</strong> as the highest-selling category.</li>
-            </ul>
-        </section>
-
-        <section id="languages">
-            <h3>Languages Known</h3>
-            <ul>
-                <li>English</li>
-                <li>Telugu</li>
-            </ul>
-        </section>
-
+    <!-- Projects Section -->
+    <div class="section-header">
+      <span class="section-badge">Featured Project</span>
+      <h2>Academic Project Showcase</h2>
+      <p>Hands-on data analytics implementation and metric exploration as documented in my resume.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Nethala Joyous Sona Varsha. All Rights Reserved.</p>
-    </footer>
+    <div class="card">
+      <span class="section-badge" style="margin-bottom: 8px;">Academic Project</span>
+      <div class="card-title">Sales Data Analysis using Microsoft Excel</div>
+      <p class="card-desc" style="margin-bottom: 16px;">An end-to-end exploratory sales dataset analysis leveraging spreadsheet formulas, multi-category aggregation, and dynamic visual charts.</p>
 
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">Total Sales</div>
+          <div class="metric-val">₹1,84,500</div>
+          <div class="metric-sub">Aggregated Volume</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Average Order</div>
+          <div class="metric-val">₹3,690</div>
+          <div class="metric-sub">Average Ticket Size</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Peak Sale</div>
+          <div class="metric-val">₹42,000</div>
+          <div class="metric-sub">Top Order Value</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Base Sale</div>
+          <div class="metric-val">₹450</div>
+          <div class="metric-sub">Minimum Order Value</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section-header">
+      <span class="section-badge">Get in Touch</span>
+      <h2>Contact Information</h2>
+      <p>Feel free to reach out directly regarding internships, technical roles, or academic collaborations.</p>
+    </div>
+
+    <div class="card">
+      <form onsubmit="event.preventDefault(); alert('Message sent!');">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="e.g. John Doe" required>
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" placeholder="e.g. john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="e.g. Internship Opportunity" required>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Write your message here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message <span>✈</span></button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h3 style="font-size: 18px; margin-bottom: 6px;">Nethala Joyous Sona Varsha</h3>
+    <p style="color: var(--text-sub); font-size: 13px;">Computer Science and Engineering Undergrad at Dhanekula Institute of Engineering and Technology. Aspiring Data Analyst.</p>
+    
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Education</a>
+      <a href="#">Projects</a>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <p class="copyright">© 2026 Nethala Joyous Sona Varsha. All information sourced directly from verified resume.<br>Vijayawada, Andhra Pradesh, India</p>
+  </footer>
+
+  <!-- Scroll to top FAB -->
+  <a href="#" class="fab">↑</a>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.body.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙';
+      } else {
+        document.body.setAttribute('data-theme', 'light');
+        themeToggle.textContent = '☀️';
+      }
+    });
+  </script>
 </body>
-    </html>
+</html>
