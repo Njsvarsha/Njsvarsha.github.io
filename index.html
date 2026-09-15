@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nethala Joyous Sona Varsha | Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <style>
+
     :root {
       --bg-gradient: radial-gradient(circle at 50% -20%, #131b2e 0%, #0b0f19 100%);
       --card-bg: rgba(22, 30, 49, 0.75);
@@ -53,6 +55,10 @@
       transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--bg-gradient);
       color: var(--text-main);
@@ -60,7 +66,8 @@
       padding-bottom: 60px;
     }
 
-    /* Navbar Header */
+    /* ================= HEADER ================= */
+
     header {
       position: sticky;
       top: 0;
@@ -118,6 +125,8 @@
       cursor: pointer;
     }
 
+    /* ================= CONTAINER ================= */
+
     .container {
       max-width: 600px;
       margin: 0 auto;
@@ -127,7 +136,8 @@
       gap: 20px;
     }
 
-    /* Hero Section (Matching Image Design) */
+    /* ================= HERO ================= */
+
     .hero-section {
       text-align: center;
       padding: 20px 10px 10px;
@@ -224,7 +234,8 @@
       color: var(--accent-blue);
     }
 
-    /* Cards Layout */
+    /* ================= CARDS ================= */
+
     .card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -287,7 +298,8 @@
       font-size: 14px;
     }
 
-    /* List Items inside Cards */
+    /* ================= SKILLS ================= */
+
     .skill-list {
       display: flex;
       flex-direction: column;
@@ -330,7 +342,8 @@
       font-weight: 600;
     }
 
-    /* Key Metrics Grid */
+    /* ================= METRICS ================= */
+
     .metrics-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -366,7 +379,8 @@
       font-weight: 600;
     }
 
-    /* Form Fields */
+    /* ================= FORM ================= */
+
     .form-group {
       display: flex;
       flex-direction: column;
@@ -380,7 +394,8 @@
       color: var(--text-sub);
     }
 
-    .form-group input, .form-group textarea {
+    .form-group input,
+    .form-group textarea {
       background: var(--input-bg);
       border: 1px solid var(--card-border);
       padding: 14px;
@@ -407,26 +422,153 @@
       box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
     }
 
-    /* Floating Action Button */
-    .fab {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--fab-bg);
-      color: white;
+    /* ================= ADDED: RESUME ================= */
+
+    .resume-section {
+      text-align: center;
+    }
+
+    .resume-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      border-radius: 22px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.35);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+      font-size: 38px;
+      box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+    }
+
+    .resume-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .resume-btn {
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       cursor: pointer;
-      border: none;
+    }
+
+    .resume-view {
+      background: linear-gradient(135deg, #6366f1, #06b6d4);
+      color: white;
+      box-shadow: 0 5px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .resume-download {
+      background: var(--inner-card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+    }
+
+    /* ================= ADDED: PROJECT HIGHLIGHTS ================= */
+
+    .project-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .project-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-sub);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .project-check {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.12);
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
+
+    .project-highlight strong {
+      color: var(--text-main);
+    }
+
+    /* ================= ADDED: CONTACT INFO ================= */
+
+    .contact-info-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .contact-info-icon {
+      min-width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .contact-info-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-sub);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .contact-value {
+      color: var(--text-main);
+      font-size: 16px;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .contact-value a {
+      color: var(--text-main);
       text-decoration: none;
     }
 
-    /* Footer Nav */
+    .contact-copy {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: var(--icon-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    /* ================= FOOTER ================= */
+
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -453,248 +595,1012 @@
       font-size: 12px;
       color: var(--text-sub);
     }
+
+    /* ================= FLOATING BUTTON ================= */
+
+    .fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--fab-bg);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 480px) {
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .hero-title {
+        font-size: 30px;
+      }
+
+      .hero-subtitle {
+        font-size: 17px;
+      }
+
+      .section-header h2 {
+        font-size: 24px;
+      }
+
+      .contact-info-card {
+        gap: 12px;
+      }
+
+      .contact-info-icon {
+        min-width: 54px;
+        height: 54px;
+        font-size: 23px;
+      }
+
+      .contact-value {
+        font-size: 14px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
 
-  <!-- Header -->
+  <!-- ================= HEADER ================= -->
+
   <header>
+
     <div class="brand">
+
       <div class="avatar">NV</div>
-      <div class="brand-name">Nethala Joyous Sona Varsha</div>
+
+      <div class="brand-name">
+        Nethala Joyous Sona Varsha
+      </div>
+
     </div>
+
     <div class="nav-actions">
-      <button class="icon-btn" id="themeToggle">🌙</button>
-      <button class="icon-btn">☰</button>
+
+      <button class="icon-btn" id="themeToggle">
+        🌙
+      </button>
+
+      <button class="icon-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        ☰
+      </button>
+
     </div>
+
   </header>
+
 
   <div class="container">
 
-    <!-- HERO SECTION (MATCHING REFERENCE IMAGE) -->
+    <!-- ================= HERO SECTION ================= -->
+
     <div class="hero-section">
+
       <div class="status-pill">
         <span class="status-dot"></span>
         Opportunities
       </div>
 
       <h1 class="hero-title">
+
         Hi, I'm
-        <span class="highlight">Nethala Joyous Sona Varsha</span>
+
+        <span class="highlight">
+          Nethala Joyous Sona Varsha
+        </span>
+
       </h1>
 
       <div class="hero-subtitle">
-        I'm an <span>Aspiring data analyst,</span>B.tech Student</span>
+
+        I'm an
+        <span class="role-highlight">
+          Aspiring Data Analyst
+        </span>
+        , B.Tech Student
+
       </div>
 
       <p class="hero-description">
-        Motivated and enthusiastic Computer Science Engineering student with a strong interest in Data Analytics. Eager to learn and contribute through an internship while developing technical and analytical skills.
+
+        Motivated and enthusiastic Computer Science Engineering
+        student with a strong interest in Data Analytics.
+        Eager to learn and contribute through an internship
+        while developing technical and analytical skills.
+
       </p>
 
       <div class="quick-chips">
+
         <div class="chip">
-          <span class="chip-icon">🎓</span> B.Tech CSE (Expected 2028)
+          <span class="chip-icon">🎓</span>
+          B.Tech CSE (Expected 2028)
         </div>
+
         <div class="chip">
-          <span class="chip-icon">🎯</span> CGPA:7.17
+          <span class="chip-icon">🎯</span>
+          CGPA: 7.17
         </div>
+
         <div class="chip">
-          <span class="chip-icon">📍</span> Vijayawada, Andhra Pradesh
+          <span class="chip-icon">📍</span>
+          Vijayawada, Andhra Pradesh
         </div>
+
       </div>
+
     </div>
 
-    <!-- About Cards -->
+
+    <!-- ================= ABOUT CARDS ================= -->
+
     <div class="card">
+
       <div class="card-icon">📊</div>
-      <div class="card-title">Data Focus</div>
-      <div class="card-desc">Passionate about exploring datasets, building pivot summaries, formula-based metrics, and visualization charts.</div>
+
+      <div class="card-title">
+        Data Focus
+      </div>
+
+      <div class="card-desc">
+
+        Passionate about exploring datasets, building pivot
+        summaries, formula-based metrics, and visualization charts.
+
+      </div>
+
     </div>
 
+
     <div class="card">
+
       <div class="card-icon">⚡</div>
-      <div class="card-title">Quick Learner</div>
-      <div class="card-desc">Adaptable and proactive mindset with solid problem solving, effective communication, and time management skills.</div>
+
+      <div class="card-title">
+        Quick Learner
+      </div>
+
+      <div class="card-desc">
+
+        Adaptable and proactive mindset with solid problem solving,
+        effective communication, and time management skills.
+
+      </div>
+
     </div>
+
 
     <div class="card">
+
       <div class="card-icon">📍</div>
-      <div class="card-title">Location & Base</div>
-      <div class="card-desc">Based in Vijayawada, Andhra Pradesh, available for in-person, hybrid, or remote internship roles.</div>
+
+      <div class="card-title">
+        Location & Base
+      </div>
+
+      <div class="card-desc">
+
+        Based in Vijayawada, Andhra Pradesh, available for
+        in-person, hybrid, or remote internship roles.
+
+      </div>
+
     </div>
 
-    <!-- Skills Section -->
+
+    <!-- ================= SKILLS ================= -->
+
     <div class="section-header">
-      <span class="section-badge">Skill Set</span>
-      <h2>Technical & Professional Competencies</h2>
-      <p>Categorized overview of technical capabilities, data analytics tools, soft skills, and languages strictly from my resume.</p>
+
+      <span class="section-badge">
+        Skill Set
+      </span>
+
+      <h2>
+        Technical & Professional Competencies
+      </h2>
+
+      <p>
+        Categorized overview of technical capabilities,
+        data analytics tools, soft skills, and languages.
+      </p>
+
     </div>
+
 
     <!-- Programming -->
+
     <div class="card">
-      <div class="card-title">Programming</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-name">C</span><span class="skill-tag">Basic</span></div>
-        <div class="skill-item"><span class="skill-name">Java</span><span class="skill-tag">Basic</span></div>
+
+      <div class="card-title">
+        Programming
       </div>
+
+      <div class="skill-list">
+
+        <div class="skill-item">
+          <span class="skill-name">C</span>
+          <span class="skill-tag">Basic</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Java</span>
+          <span class="skill-tag">Basic</span>
+        </div>
+
+      </div>
+
     </div>
 
-    <!-- Data Analytics & Tools -->
+
+    <!-- Data Analytics -->
+
     <div class="card">
-      <div class="card-title">Data Analytics & Tools</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-name">Microsoft Excel</span><span class="skill-tag">Core Tool</span></div>
-        <div class="skill-item"><span class="skill-name">Pivot Tables & Charts</span><span class="skill-tag">Applied</span></div>
-        <div class="skill-item"><span class="skill-name">Data Analysis</span><span class="skill-tag">Beginner</span></div>
+
+      <div class="card-title">
+        Data Analytics & Tools
       </div>
+
+      <div class="skill-list">
+
+        <div class="skill-item">
+          <span class="skill-name">
+            Microsoft Excel
+          </span>
+          <span class="skill-tag">
+            Core Tool
+          </span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">
+            Pivot Tables & Charts
+          </span>
+          <span class="skill-tag">
+            Applied
+          </span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">
+            Data Analysis
+          </span>
+          <span class="skill-tag">
+            Beginner
+          </span>
+        </div>
+
+      </div>
+
     </div>
+
 
     <!-- Soft Skills -->
+
     <div class="card">
-      <div class="card-title">Soft Skills</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-name">Quick Learner</span><span class="skill-tag">Key Asset</span></div>
-        <div class="skill-item"><span class="skill-name">Problem Solving</span><span class="skill-tag">Analytical</span></div>
-        <div class="skill-item"><span class="skill-name">Teamwork</span><span class="skill-tag">Collaborative</span></div>
-        <div class="skill-item"><span class="skill-name">Communication</span><span class="skill-tag">Interpersonal</span></div>
-        <div class="skill-item"><span class="skill-name">Time Management</span><span class="skill-tag">Organized</span></div>
+
+      <div class="card-title">
+        Soft Skills
       </div>
+
+      <div class="skill-list">
+
+        <div class="skill-item">
+          <span class="skill-name">Quick Learner</span>
+          <span class="skill-tag">Key Asset</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Problem Solving</span>
+          <span class="skill-tag">Analytical</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Teamwork</span>
+          <span class="skill-tag">Collaborative</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Communication</span>
+          <span class="skill-tag">Interpersonal</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Time Management</span>
+          <span class="skill-tag">Organized</span>
+        </div>
+
+      </div>
+
     </div>
+
 
     <!-- Languages -->
+
     <div class="card">
-      <div class="card-title">Languages</div>
+
+      <div class="card-title">
+        Languages
+      </div>
+
       <div class="skill-list">
-        <div class="skill-item"><span class="skill-name">English</span><span class="skill-tag">Proficient</span></div>
-        <div class="skill-item"><span class="skill-name">Telugu</span><span class="skill-tag">Native / Fluent</span></div>
+
+        <div class="skill-item">
+          <span class="skill-name">English</span>
+          <span class="skill-tag">Proficient</span>
+        </div>
+
+        <div class="skill-item">
+          <span class="skill-name">Telugu</span>
+          <span class="skill-tag">Native / Fluent</span>
+        </div>
+
       </div>
+
     </div>
 
-    <!-- Education Section -->
+
+    <!-- ================= EDUCATION ================= -->
+
     <div class="section-header">
-      <span class="section-badge">Education</span>
-      <h2>Academic Background</h2>
-      <p>Formal undergraduate engineering education and academic performance metrics.</p>
+
+      <span class="section-badge">
+        Education
+      </span>
+
+      <h2>
+        Academic Background
+      </h2>
+
+      <p>
+        Formal undergraduate engineering education
+        and academic performance metrics.
+      </p>
+
     </div>
+
 
     <div class="card">
-      <div class="card-title">B.Tech in Computer Science and Engineering</div>
-      <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 12px;">Dhanekula Institute of Engineering and Technology</p>
-      
+
+      <div class="card-title">
+        B.Tech in Computer Science and Engineering
+      </div>
+
+      <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 12px;">
+
+        Dhanekula Institute of Engineering and Technology
+
+      </p>
+
       <div class="metrics-grid">
+
         <div class="metric-card">
-          <div class="metric-label">Cumulative CGPA</div>
-          <div class="metric-val" style="color: #10b981;">7.17</div>
-          <div class="metric-sub">Verified Merit</div>
+
+          <div class="metric-label">
+            Cumulative CGPA
+          </div>
+
+          <div class="metric-val" style="color: #10b981;">
+            7.17
+          </div>
+
+          <div class="metric-sub">
+            Current
+          </div>
+
         </div>
+
+
         <div class="metric-card">
-          <div class="metric-label">Expected Graduation</div>
-          <div class="metric-val">2028</div>
-          <div class="metric-sub" style="color: var(--text-sub);">In Progress</div>
+
+          <div class="metric-label">
+            Expected Graduation
+          </div>
+
+          <div class="metric-val">
+            2028
+          </div>
+
+          <div class="metric-sub" style="color: var(--text-sub);">
+            In Progress
+          </div>
+
         </div>
+
       </div>
+
     </div>
 
-    <!-- Projects Section -->
+
+    <!-- ================= PROJECT ================= -->
+
     <div class="section-header">
-      <span class="section-badge">Featured Project</span>
-      <h2>Academic Project Showcase</h2>
-      <p>Hands-on data analytics implementation and metric exploration as documented in my resume.</p>
+
+      <span class="section-badge">
+        Featured Project
+      </span>
+
+      <h2>
+        Academic Project Showcase
+      </h2>
+
+      <p>
+        Hands-on data analytics implementation
+        and metric exploration.
+      </p>
+
     </div>
+
 
     <div class="card">
-      <span class="section-badge" style="margin-bottom: 8px;">Academic Project</span>
-      <div class="card-title">Sales Data Analysis using Microsoft Excel</div>
-      <p class="card-desc" style="margin-bottom: 16px;">An end-to-end exploratory sales dataset analysis leveraging spreadsheet formulas, multi-category aggregation, and dynamic visual charts.</p>
+
+      <span class="section-badge" style="margin-bottom: 8px;">
+        Academic Project
+      </span>
+
+      <div class="card-title">
+        Sales Data Analysis using Microsoft Excel
+      </div>
+
+      <p class="card-desc">
+
+        An end-to-end exploratory sales dataset analysis
+        leveraging spreadsheet formulas, multi-category
+        aggregation, and dynamic visual charts.
+
+      </p>
+
+
+      <!-- ADDED PROJECT HIGHLIGHTS -->
+
+      <div class="project-highlights">
+
+        <div class="project-highlight">
+
+          <span class="project-check">✓</span>
+
+          <div>
+
+            <strong>Dataset Construction:</strong>
+            Created and analyzed a sales dataset using Microsoft Excel.
+
+          </div>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <span class="project-check">✓</span>
+
+          <div>
+
+            <strong>Mathematical Modeling:</strong>
+            Used SUM, AVERAGE, MAX and MIN formulas
+            to calculate key sales metrics.
+
+          </div>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <span class="project-check">✓</span>
+
+          <div>
+
+            <strong>Pivot Tables:</strong>
+            Built Pivot Tables to summarize
+            category-wise sales performance.
+
+          </div>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <span class="project-check">✓</span>
+
+          <div>
+
+            <strong>Pivot Chart:</strong>
+            Created a Pivot Chart to visualize
+            sales performance clearly.
+
+          </div>
+
+        </div>
+
+
+        <div class="project-highlight">
+
+          <span class="project-check">✓</span>
+
+          <div>
+
+            <strong>Key Finding:</strong>
+            Electronics was identified as the
+            highest-selling category.
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EXISTING METRICS -->
 
       <div class="metrics-grid">
+
         <div class="metric-card">
-          <div class="metric-label">Total Sales</div>
-          <div class="metric-val">₹1,84,500</div>
-          <div class="metric-sub">Aggregated Volume</div>
+
+          <div class="metric-label">
+            Total Sales
+          </div>
+
+          <div class="metric-val">
+            ₹1,84,500
+          </div>
+
+          <div class="metric-sub">
+            Aggregated Volume
+          </div>
+
         </div>
+
+
         <div class="metric-card">
-          <div class="metric-label">Average Order</div>
-          <div class="metric-val">₹3,690</div>
-          <div class="metric-sub">Average Ticket Size</div>
+
+          <div class="metric-label">
+            Average Order
+          </div>
+
+          <div class="metric-val">
+            ₹3,690
+          </div>
+
+          <div class="metric-sub">
+            Average Ticket Size
+          </div>
+
         </div>
+
+
         <div class="metric-card">
-          <div class="metric-label">Peak Sale</div>
-          <div class="metric-val">₹42,000</div>
-          <div class="metric-sub">Top Order Value</div>
+
+          <div class="metric-label">
+            Peak Sale
+          </div>
+
+          <div class="metric-val">
+            ₹42,000
+          </div>
+
+          <div class="metric-sub">
+            Top Order Value
+          </div>
+
         </div>
+
+
         <div class="metric-card">
-          <div class="metric-label">Base Sale</div>
-          <div class="metric-val">₹450</div>
-          <div class="metric-sub">Minimum Order Value</div>
+
+          <div class="metric-label">
+            Base Sale
+          </div>
+
+          <div class="metric-val">
+            ₹450
+          </div>
+
+          <div class="metric-sub">
+            Minimum Order Value
+          </div>
+
         </div>
+
       </div>
+
     </div>
 
-    <!-- Contact Section -->
+
+    <!-- ================= CURRICULUM VITAE ================= -->
+
     <div class="section-header">
-      <span class="section-badge">Get in Touch</span>
-      <h2>Contact Information</h2>
-      <p>Feel free to reach out directly regarding internships, technical roles, or academic collaborations.</p>
+
+      <span class="section-badge">
+        Curriculum Vitae
+      </span>
+
+      <h2>
+        My Resume
+      </h2>
+
+      <p>
+        View my complete resume including education,
+        technical skills, project experience and career profile.
+      </p>
+
     </div>
+
+
+    <div class="card resume-section">
+
+      <div class="resume-icon">
+        📄
+      </div>
+
+      <div class="card-title">
+        Nethala Joyous Sona Varsha
+      </div>
+
+      <p class="card-desc">
+
+        B.Tech Computer Science and Engineering student
+        aspiring to build a career in Data Analytics.
+
+      </p>
+
+
+      <div class="resume-buttons">
+
+        <a href="resume.pdf"
+           target="_blank"
+           class="resume-btn resume-view">
+
+          👁️ View Full Resume
+
+        </a>
+
+
+        <a href="resume.pdf"
+           download
+           class="resume-btn resume-download">
+
+          🖨️ Download / Print Resume (PDF)
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <div class="section-header">
+
+      <span class="section-badge">
+        Get in Touch
+      </span>
+
+      <h2>
+        Contact Information
+      </h2>
+
+      <p>
+        Feel free to reach out directly regarding internships,
+        technical roles, or academic collaborations.
+      </p>
+
+    </div>
+
+
+    <!-- EMAIL -->
+
+    <div class="card contact-info-card">
+
+      <div class="contact-info-icon">
+        📧
+      </div>
+
+      <div class="contact-info-content">
+
+        <div class="contact-label">
+          Email Address
+        </div>
+
+        <div class="contact-value">
+
+          <a href="mailto:njsvarsha29@gmail.com">
+            njsvarsha29@gmail.com
+          </a>
+
+        </div>
+
+      </div>
+
+      <button class="contact-copy"
+              onclick="copyContact('njsvarsha29@gmail.com')">
+
+        📋
+
+      </button>
+
+    </div>
+
+
+    <!-- PHONE -->
+
+    <div class="card contact-info-card">
+
+      <div class="contact-info-icon">
+        📞
+      </div>
+
+      <div class="contact-info-content">
+
+        <div class="contact-label">
+          Phone Number
+        </div>
+
+        <div class="contact-value">
+
+          <a href="tel:+917673913116">
+            +91 7673913116
+          </a>
+
+        </div>
+
+      </div>
+
+      <button class="contact-copy"
+              onclick="copyContact('+91 7673913116')">
+
+        📋
+
+      </button>
+
+    </div>
+
+
+    <!-- LOCATION -->
+
+    <div class="card contact-info-card">
+
+      <div class="contact-info-icon">
+        📍
+      </div>
+
+      <div class="contact-info-content">
+
+        <div class="contact-label">
+          Location
+        </div>
+
+        <div class="contact-value">
+          Vijayawada, Andhra Pradesh, India
+        </div>
+
+      </div>
+
+      <button class="contact-copy"
+              onclick="copyContact('Vijayawada, Andhra Pradesh, India')">
+
+        📋
+
+      </button>
+
+    </div>
+
+
+    <!-- ================= CONTACT FORM ================= -->
 
     <div class="card">
+
       <form onsubmit="event.preventDefault(); alert('Message sent!');">
+
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="e.g. John Doe" required>
+
+          <label>
+            Your Name
+          </label>
+
+          <input type="text"
+                 placeholder="e.g. John Doe"
+                 required>
+
         </div>
+
+
         <div class="form-group">
-          <label>Your Email</label>
-          <input type="email" placeholder="e.g. john@example.com" required>
+
+          <label>
+            Your Email
+          </label>
+
+          <input type="email"
+                 placeholder="e.g. john@example.com"
+                 required>
+
         </div>
+
+
         <div class="form-group">
-          <label>Subject</label>
-          <input type="text" placeholder="e.g. Internship Opportunity" required>
+
+          <label>
+            Subject
+          </label>
+
+          <input type="text"
+                 placeholder="e.g. Internship Opportunity"
+                 required>
+
         </div>
+
+
         <div class="form-group">
-          <label>Message</label>
-          <textarea rows="4" placeholder="Write your message here..." required></textarea>
+
+          <label>
+            Message
+          </label>
+
+          <textarea rows="4"
+                    placeholder="Write your message here..."
+                    required></textarea>
+
         </div>
-        <button type="submit" class="btn-submit">Send Message <span>✈</span></button>
+
+
+        <button type="submit"
+                class="btn-submit">
+
+          Send Message
+          <span>✈</span>
+
+        </button>
+
       </form>
+
     </div>
 
   </div>
 
-  <!-- Footer -->
+
+  <!-- ================= FOOTER ================= -->
+
   <footer>
-    <h3 style="font-size: 18px; margin-bottom: 6px;">Nethala Joyous Sona Varsha</h3>
-    <p style="color: var(--text-sub); font-size: 13px;">Computer Science and Engineering Undergrad at Dhanekula Institute of Engineering and Technology. Aspiring Data Analyst.</p>
-    
+
+    <h3 style="font-size: 18px; margin-bottom: 6px;">
+
+      Nethala Joyous Sona Varsha
+
+    </h3>
+
+    <p style="color: var(--text-sub); font-size: 13px;">
+
+      Computer Science and Engineering Undergrad at
+      Dhanekula Institute of Engineering and Technology.
+      Aspiring Data Analyst.
+
+    </p>
+
+
     <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Skills</a>
-      <a href="#">Education</a>
-      <a href="#">Projects</a>
-      <a href="#">Resume</a>
-      <a href="#">Contact</a>
+
+      <a href="#">
+        Home
+      </a>
+
+      <a href="#">
+        About
+      </a>
+
+      <a href="#">
+        Skills
+      </a>
+
+      <a href="#">
+        Education
+      </a>
+
+      <a href="#">
+        Projects
+      </a>
+
+      <a href="resume.pdf" target="_blank">
+        Resume
+      </a>
+
+      <a href="#">
+        Contact
+      </a>
+
     </div>
 
-    <p class="copyright">© 2026 Nethala Joyous Sona Varsha. All information sourced directly from verified resume.<br>Vijayawada, Andhra Pradesh, India</p>
+
+    <p class="copyright">
+
+      © 2026 Nethala Joyous Sona Varsha.
+      All Rights Reserved.
+      <br>
+      Vijayawada, Andhra Pradesh, India
+
+    </p>
+
   </footer>
 
-  <!-- Scroll to top FAB -->
-  <a href="#" class="fab">↑</a>
+
+  <!-- ================= SCROLL TO TOP ================= -->
+
+  <a href="#"
+     class="fab"
+     onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">
+
+    ↑
+
+  </a>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
 
   <script>
-    const themeToggle = document.getElementById('themeToggle');
+
+    /* Theme Toggle */
+
+    const themeToggle =
+      document.getElementById('themeToggle');
+
     themeToggle.addEventListener('click', () => {
-      const isLight = document.body.getAttribute('data-theme') === 'light';
+
+      const isLight =
+        document.body.getAttribute('data-theme') === 'light';
+
       if (isLight) {
+
         document.body.removeAttribute('data-theme');
+
         themeToggle.textContent = '🌙';
+
       } else {
+
         document.body.setAttribute('data-theme', 'light');
+
         themeToggle.textContent = '☀️';
+
       }
+
     });
+
+
+    /* Copy Email / Phone / Location */
+
+    function copyContact(text) {
+
+      navigator.clipboard.writeText(text)
+        .then(() => {
+
+          alert("Copied: " + text);
+
+        })
+        .catch(() => {
+
+          alert("Copy failed. Please copy it manually.");
+
+        });
+
+    }
+
   </script>
+
 </body>
-</html>
+  </html>
